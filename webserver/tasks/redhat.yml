@@ -1,0 +1,9 @@
+- name: Install web server
+  ansible.builtin.yum:
+    name: "httpd"
+    state: latest
+- name: Start Web Service
+  service:
+    name: httpd
+    state: started
+    enabled: yes
